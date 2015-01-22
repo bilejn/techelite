@@ -45,6 +45,9 @@ table {
 	line-height: 1;
 }
 
+#wrapper {
+	padding: 0 10px 30px 10px ;
+}
 
 
     @media all{

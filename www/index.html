@@ -43,7 +43,7 @@
 					
 					
 			<div data-role="content" id="content" data-theme="a" class="noLine">
-			
+				<div id = "wrapper">
 					   <form name="generalData" action="" onsubmit="return generalForm();"  data-ajax="false" >
 	
 						<h3>Create Invitation</h3>
@@ -52,8 +52,25 @@
 						<div  data-role="controlgroup" data-type="vertical">	
 							<input type="text" name="InvitationFirstname" id="InvitationFirstname" value="" placeholder="First name"/>
 							<input type="text" name="InvitationLastname" id="InvitationLastname" value="" placeholder="Last name"/>
-							<input type="text" name="InvitationNationality" id="InvitationNationality" value="" placeholder="Nationality"/>
-							<input type="text" name="InvitationLanguage" id="InvitationLanguage" value="" placeholder="Language"/>
+						
+								<fieldset data-role="controlgroup">
+									<select name="InvitationNationality" id="InvitationNationality">
+										<option>Nationality:</option>
+										<option value="srb">Serbian</option>
+										<option value="cro">Croatian</option>
+										<option value="slo">Slovenian</option>
+									</select>
+
+									<select name="InvitationLanguage" id="InvitationLanguage">
+										<option>Language</option>
+										<option value="srb">Serbian</option>
+										<option value="cro">Croatian</option>
+										<option value="slo">Slovenian</option>
+									</select>
+								</fieldset>
+								
+							
+
 							<input type="text" name="InvitationPhoneNo" id="InvitationPhoneNo" value="" placeholder="Phone number"/>
 							<input type="text" name="InvitationEmail" id="InvitationEmail" value="" placeholder="E-mail"/>
 							<input type="text" name="InvitationAnotherContactInfo" id="InvitationAnotherContactInfo" value="" placeholder="Other contact info"/>
@@ -66,17 +83,18 @@
 									<label for="female">Female</label>
 								</div>	   
 							</fieldset>
+							<input type="text" name="InvitationStatus" id="InvitationStatus" value="" placeholder="Status"/>
 							<hr />
 							<p>Another contact information:</p>	
-							<input type="text" name="InvitationStatus" id="InvitationStatus" value="" placeholder="Status"/>	
+								
 							<input type="text" name="InviterFirstname" id="InviterFirstname" value="" placeholder="Inviter first name">
 							<input type="text" name="InviterLastname" id="InviterLastname" value="" placeholder="Inviter last name"/>						
 							<input type="text" name="InviterPhoneNo" id="InviterPhoneNo" value="" placeholder="Inviter phone number"/>
 							<input type="text" name="InviterEmail" id="InviterEmail" value="" placeholder="Inviter e-mail"/>							
 						</div>
 						<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check">
-						</div>
-
+				</div>
+			</div>
 		</section>
 		
 		
