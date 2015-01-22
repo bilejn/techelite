@@ -1,6 +1,6 @@
 function checkConnection() {
 
-
+   try{
         var networkState = navigator.connection.type;
 
         setTimeout(function(){
@@ -19,5 +19,11 @@ function checkConnection() {
 		}
             
         }, 2000);
+    }catch(e){
+        alert(e);
+        $.each(navigator, function(key, value){
+            alert(key+' => '+value);
+        });
+    }
 }
 
