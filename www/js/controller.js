@@ -1,10 +1,10 @@
 $(document).ready(function(){
 	
 	  try{
-        var networkState = navigator.connection && navigator.connection.type;
+        var networkState = navigator.connection.type;
 
         setTimeout(function(){
-            networkState = navigator.connection && navigator.connection.type;
+            networkState = navigator.connection.type;
 
             var states = {};
             states[Connection.UNKNOWN]  = 'Unknown connection';
