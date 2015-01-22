@@ -19,6 +19,5 @@ function checkConnection() {
 		}
             
         }, 2000);
-
 }
 
