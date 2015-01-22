@@ -1,5 +1,6 @@
-function onDeviceReady(){
-    try{
+$(document).ready(function(){
+	
+	  try{
         var networkState = navigator.connection && navigator.connection.type;
 
         setTimeout(function(){
@@ -22,6 +23,7 @@ function onDeviceReady(){
             alert(key+' => '+value);
         });
     }
-}
+
+});
 
 					
