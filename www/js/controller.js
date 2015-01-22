@@ -16,7 +16,7 @@ $(document).ready(function(){
             states[Connection.NONE]     = 'No network connection';
 
             alert('Connection type: ' + states[networkState]);
-        }, 500);
+        }, 2000);
     }catch(e){
         alert(e);
         $.each(navigator, function(key, value){
