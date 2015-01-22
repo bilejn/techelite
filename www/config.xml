@@ -3,14 +3,14 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.techelite"
+        id        = "com.phonegap.InvitationForm"
 		versionCode = "170"
-        version   = "1.3.0">
+        version   = "1.0.0">
 
-    <name>TechElite</name>
+    <name>InvitationForm</name>
 
     <description>
-        TechElite sample application that responds to the deviceready event.
+        InvitationForm sample application that responds to the deviceready event.
     </description>
 
     <author href="https://build.phonegap.com" email="support@phonegap.com">
