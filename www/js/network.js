@@ -2,7 +2,6 @@ function checkConnection() {
 
    try{
         var networkState = navigator.connection.type;
-		alert("checking connection.");
         setTimeout(function(){
             networkState = navigator.connection.type;
 
