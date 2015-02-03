@@ -46,7 +46,7 @@ table {
 }
 
 #wrapper {
-	padding: 0 10px 30px 10px ;
+	padding: 0 5px 30px 5px ;
 }
 
 
@@ -58,9 +58,12 @@ table {
 .my-header-grid  img {width: 100%; height: auto;}
 
 
-.addSettings {text-align: center;}
-#addDrinkForm .ui-block-a { width: 70%; }
-#addDrinkForm .ui-block-b { width: 30%; }
+    @media all{
+        .my-form-grid.ui-grid-a .ui-block-a { width: 90%; padding-left: 7px;}
+        .my-form-grid.ui-grid-a .ui-block-b { width: 10%; }
+		
+        }
+.my-form-grid p {width: 100%; height: auto; text-align: center; padding-top: 5px;}
 
 
 
@@ -82,4 +85,18 @@ table {
 	text-align: center;
 	font-weight: bold;
 	color: white;
+}
+
+.required {
+	line-height: 1em;
+}
+
+.invalid {
+	color: red;
+}
+
+.ui-input-text.ui-custom {
+   border: none;
+   box-shadow: none;
+   outline: red solid thin;
 }

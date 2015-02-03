@@ -14,6 +14,8 @@
 			<script type="text/javascript" src="js/jstorage.js"></script>
 			<script type="text/javascript" src="js/controller.js"></script>
 			<script type="text/javascript" src="js/network.js"></script>
+			<script type="text/javascript" src="js/form.js"></script>
+			<script type="text/javascript" src="js/view.js"></script>
 			<script type="text/javascript">
 				$(document).bind("mobileinit", function() {
 					$.mobile.defaultPageTransition = "none";
@@ -29,10 +31,10 @@
 
 	</head>
 
-	<body>		
+	<body >		
 			
 			
-		<section id="home" data-role="page" data-theme="a">
+		<section id="home" data-role="page" >
 
 			<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="a">
 				<div class="my-header-grid ui-grid-a">
@@ -48,55 +50,106 @@
 					
 			<div data-role="content" id="content" data-theme="a" class="noLine">
 				<div id = "wrapper">
-					   <form name="generalData" action="" onsubmit="return generalForm();"  data-ajax="false" >
+					   <form id="generalData" name="generalData" action="" onsubmit="return form.invitationForm();"  data-ajax="false" >
 	
 						<h3>Create Invitation</h3>
 						<hr />
-						<p>The person you want to invite:</p>
-						<div  data-role="controlgroup" data-type="vertical">	
-							<input type="text" name="InvitationFirstname" id="InvitationFirstname" value="" placeholder="First name"/>
-							<input type="text" name="InvitationLastname" id="InvitationLastname" value="" placeholder="Last name"/>
 						
-								<fieldset data-role="controlgroup">
-									<select name="InvitationNationality" id="InvitationNationality">
-										<option>Nationality:</option>
-										<option value="srb">Serbian</option>
-										<option value="cro">Croatian</option>
-										<option value="slo">Slovenian</option>
-									</select>
+						<h4>The person you want to invite:</h4>
+						<div class="my-form-grid ui-grid-a">
+							<div class="ui-block-a">
+								<input type="text" name="InvitationFirstname" id="InvitationFirstname" value="" placeholder="First name" />
+							</div>
+							<div class="ui-block-b"><p class="required" for="InvitationFirstname"></p></div>
+							<div class="ui-block-a">
+								<input  type="text" name="InvitationLastname" id="InvitationLastname" value="" placeholder="Last name"/>
+							</div>
+							<div class="ui-block-b"><p class="required" for ="InvitationLastname" ></p></div>
 
+								<div class="ui-block-a">
+									<select name="InvitationNationality" id="InvitationNationality">
+										<option  >Nationality</option>
+										<option value="1">Brazil</option>
+										<option value="2">Canada</option>
+										<option value="3">China</option>
+										<option value="4">Japan</option>
+										<option value="5">Spain</option>
+										<option value="6">UK</option>
+										<option value="7">USA</option>
+									</select>
+								</div>
+								<div class="ui-block-b"><p class="required" for ="InvitationNationality" ></p></div>
+								<div class="ui-block-a">
+								
 									<select name="InvitationLanguage" id="InvitationLanguage">
 										<option>Language</option>
-										<option value="srb">Serbian</option>
-										<option value="cro">Croatian</option>
-										<option value="slo">Slovenian</option>
+										<option value="1">Arabic</option>
+										<option value="2">English</option>
 									</select>
-								</fieldset>
+								</div>
+								<div class="ui-block-b"><p class="required"  for="InvitationLanguage" ></p></div>
 								
 							
-
-							<input type="text" name="InvitationPhoneNo" id="InvitationPhoneNo" value="" placeholder="Phone number"/>
-							<input type="text" name="InvitationEmail" id="InvitationEmail" value="" placeholder="E-mail"/>
-							<input type="text" name="InvitationAnotherContactInfo" id="InvitationAnotherContactInfo" value="" placeholder="Other contact info"/>
-							<fieldset class="ui-grid-a">
-								<div class="ui-block-a"><p>Gender:</p></div>
-								<div class="ui-block-b">								
-									<input type="radio" name="gender" id="male" value="male"/>
-									<label for="male">Male</label>
-									<input type="radio" name="gender" id="female" value="female"/>
-									<label for="female">Female</label>
-								</div>	   
-							</fieldset>
-							<input type="text" name="InvitationStatus" id="InvitationStatus" value="" placeholder="Status"/>
-							<hr />
-							<p>Another contact information:</p>	
+								<div class="ui-block-a">
+									<input type="text" name="InvitationPhoneNo" id="InvitationPhoneNo" value="" placeholder="Phone number"/>
+								</div>
+								<div class="ui-block-b"></div>
 								
-							<input type="text" name="InviterFirstname" id="InviterFirstname" value="" placeholder="Inviter first name">
-							<input type="text" name="InviterLastname" id="InviterLastname" value="" placeholder="Inviter last name"/>						
-							<input type="text" name="InviterPhoneNo" id="InviterPhoneNo" value="" placeholder="Inviter phone number"/>
-							<input type="text" name="InviterEmail" id="InviterEmail" value="" placeholder="Inviter e-mail"/>							
-						</div>
-						<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check" >
+								<div class="ui-block-a">
+									<input type="text" name="InvitationEmail" id="InvitationEmail" value="" placeholder="E-mail"/>
+								</div>
+								<div class="ui-block-b"><p class="required" for="InvitationEmail"></p></div>
+								
+								<div class="ui-block-a">
+									<input type="text" name="InvitationAnotherContactInfo" id="InvitationAnotherContactInfo" value="" placeholder="Other contact info"/>
+								</div>
+								<div class="ui-block-b"></div>
+								
+								<div class="ui-block-a">
+									<fieldset data-role="controlgroup" data-type="horizontal">
+										<input type="radio" name="InvitationGender" id="male" value="male"/>
+										<label for="male">Male &nbsp &nbsp</label>
+										<input type="radio" name="InvitationGender" id="female" value="female"/>
+										<label for="female">Female</label>
+									</fieldset>
+								</div>
+								<div class="ui-block-b"><p class="required" for="InvitationGender"></p></div>
+								
+								<div class="ui-block-a">
+									<input type="text" name="InvitationStatus" id="InvitationStatus" value="" placeholder="Status"/>
+								</div>
+								<div class="ui-block-b"><p class="required" for="InvitationStatus"></p></div></div>
+								
+								
+								
+								
+								<hr />
+								<h4>Another contact information:</h4>	
+								
+								<div class="my-form-grid ui-grid-a">
+								<div class="ui-block-a">	
+									<input type="text" name="InviterFirstname" id="InviterFirstname" value="" placeholder="Inviter first name">
+								</div>
+								<div class="ui-block-b"><p class="required" for="InviterFirstname">*</p></div>
+								<div class="ui-block-a">
+									<input type="text" name="InviterLastname" id="InviterLastname" value="" placeholder="Inviter last name"/>	
+								</div>
+								<div class="ui-block-b"><p class="required"  for="InviterLastname">*</p></div>
+					
+								<div class="ui-block-a">
+									<input type="text" name="InviterPhoneNo" id="InviterPhoneNo" value="" placeholder="Inviter phone number"/>
+								</div>
+								<div class="ui-block-b"><p class="required" for="InviterPhoneNo">*</p></div>
+								<div class="ui-block-a">
+									<input type="text" name="InviterEmail" id="InviterEmail" value="" placeholder="Inviter e-mail"/>	
+								</div>
+								<div class="ui-block-b"><p class="required" for="InviterEmail">*</p></div></div>						
+						
+						<div class="wrapper">
+						<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check" />
+						
+						<a href="" data-role="button" onclick = "form.sendJson();" >Send</a>	
+						</div></div>
 				</div>
 			</div>
 		</section>
