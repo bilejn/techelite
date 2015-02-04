@@ -49,11 +49,9 @@
 					
 					
 			<div data-role="content" id="content" data-theme="a" class="noLine">
-				<div id = "wrapper">
+
 					   <form id="generalData" name="generalData" action="" onsubmit="return form.invitationForm();"  data-ajax="false" >
-	
-						<h3>Create Invitation</h3>
-						<hr />
+
 						
 						<h4>The person you want to invite:</h4>
 						<div class="my-form-grid ui-grid-a">
@@ -126,7 +124,7 @@
 								<hr />
 								<h4>Another contact information:</h4>	
 								
-								<div class="my-form-grid ui-grid-a">
+							<div class="my-form-grid ui-grid-a">
 								<div class="ui-block-a">	
 									<input type="text" name="InviterFirstname" id="InviterFirstname" value="" placeholder="Inviter first name">
 								</div>
@@ -143,18 +141,57 @@
 								<div class="ui-block-a">
 									<input type="text" name="InviterEmail" id="InviterEmail" value="" placeholder="Inviter e-mail"/>	
 								</div>
-								<div class="ui-block-b"><p class="required" for="InviterEmail">*</p></div></div>						
-						
-						<div class="wrapper">
-						<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check" />
-						
-						<a href="" data-role="button" onclick = "form.sendJson();" >Send</a>	
-						</div></div>
-				</div>
+								<div class="ui-block-b"><p class="required" for="InviterEmail">*</p></div>
+								</div>	
+								
+							<div class="buttons-grid ui-grid-a">
+								<div class="ui-block-a">
+								<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check" />
+								</div>
+								<div class="ui-block-b">
+									<a href="" data-role="button" onclick = "form.deleteJson();"  data-icon="delete">Clear</a>
+								</div>
+							</div>
+						</form>
+	
 			</div>
 		</section>
-		
-		
+
+
+		<section id="confirm" data-role="page" >
+
+					<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="a">
+						<div class="my-header-grid ui-grid-a">
+							<div class="ui-block-a">
+								<img src="img/logo.png" />
+							</div>
+							<div class="ui-block-b">
+								<h1>Invitation Form</h1>
+							</div>
+						</div>
+					</div>	
+
+					<div data-role="content" id="confirmationContent" data-theme="a" class="noLine">
+						<div id = "wrapper">	
+			
+						<h4>Confirm and Send:</h4>
+						<div id = "reviewInvitation"></div>
+
+
+						<div class="ui-grid-a">
+							<div class="ui-block-a">
+								<a href="" data-role="button" onclick ="form.sendJson();"  data-icon="mail">Send</a>
+							</div>
+							<div class="ui-block-b">
+								<a href="#home" data-role="button" data-icon="back" >Back</a>
+							</div>
+						</div>
+							
+						</div>
+					</div>	
+		</section>
+
+	
 	<script type="text/javascript">
 		$(window).on('load', function () {
 			$(this).trigger('resize');

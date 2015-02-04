@@ -13,3 +13,21 @@ $(document).on("pagebeforeshow", "#home", function (){
 	} */
 
 });
+
+$(document).on("pagebeforeshow", "#confirm", function (){
+
+
+	
+		var data = $.jStorage.get("json_data");
+		var output = ""
+		for (var key in data) {
+			output = output + '<p>' + key + ': ' + data[key] + '</p>';
+		}		
+		
+		$("#reviewInvitation").html(output);
+		
+		
+		$("#confirm").trigger("create");
+
+
+});

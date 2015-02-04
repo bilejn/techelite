@@ -59,13 +59,17 @@ table {
 
 
     @media all{
-        .my-form-grid.ui-grid-a .ui-block-a { width: 90%; padding-left: 7px;}
+        .my-form-grid.ui-grid-a .ui-block-a { width: 90%; padding-left: 15px;}
         .my-form-grid.ui-grid-a .ui-block-b { width: 10%; }
 		
         }
 .my-form-grid p {width: 100%; height: auto; text-align: center; padding-top: 5px;}
 
-
+    @media all{
+        .buttons-grid.ui-grid-a .ui-block-a { width: 50%; padding-left: 15px;}
+        .buttons-grid.ui-grid-a .ui-block-b { width: 50%; padding-right: 15px;}
+		
+        }
 
 .header-style {
 	margin:0;
