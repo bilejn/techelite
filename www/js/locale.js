@@ -4,14 +4,29 @@
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
 		    function (locale) {
-				cLANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
-				$("#home").trigger("pagebeforeshow");
+				var LANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
+
+				if (checkLanguageExists(LANGUAGE)){
+					cLANGUAGE = LANGUAGE;
+					$("#home").trigger("pagebeforeshow");
+				}
+				
 		    },
 		    //On Failure set language to english
 		    function () {
 				cLANGUAGE = "en";
 			}
 		 );
+	}
+	
+	function checkLanguageExists(lang){
+		var arr = Object.keys(locals);
+		for (var i = 0; i < arr.length;  i++){
+			if (arr[i] == lang){
+				return true;
+			}
+		}
+		return false;
 	}
 
 
