@@ -1,4 +1,4 @@
-	var cLANGUAGE = "sr";
+	var cLANGUAGE;
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
@@ -8,6 +8,7 @@
 		    //On Failure set language to english
 		    function () {cLANGUAGE = "en";}
 		 );
+		 alert(cLANGUAGE);
 	}
 
 var locals= {
