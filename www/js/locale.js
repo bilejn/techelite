@@ -3,14 +3,14 @@
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
 		    function (locale) {
-			cLANGUAGE = locale.value;
+			LANGUAGE = locale.value;
 		    },
 		    //On Failure set language to english
-		    function () {cLANGUAGE = "en";}
+		    function () {LANGUAGE = "en";}
 		 );
-		 alert(cLANGUAGE);
+		 alert(LANGUAGE);
 	}
-	cLANGUAGE = "sr";
+
 
 var locals= {
     'en': {
