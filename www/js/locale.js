@@ -4,12 +4,12 @@
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
 		    function (locale) {
-			LANGUAGE = locale.value;
+			alert(locale.value);
 		    },
 		    //On Failure set language to english
-		    function () {LANGUAGE = "en";}
+		    function () {}
 		 );
-		 alert(LANGUAGE);
+
 	}
 
 
