@@ -1,4 +1,5 @@
 	var cLANGUAGE = "en";
+	var LANGUAGE;
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
