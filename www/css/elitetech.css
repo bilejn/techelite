@@ -75,8 +75,8 @@ table {
         }
 
     @media all{
-        .confirm-grid.ui-grid-a .ui-block-a { width: 40%; padding: 0; margin: 0;}
-        .confirm-grid.ui-grid-a .ui-block-b { width: 60%; padding: 0; margin: 0; }
+        .confirm-grid.ui-grid-a .ui-block-a { width: 50%; padding: 0; margin: 0;}
+        .confirm-grid.ui-grid-a .ui-block-b { width: 50%; padding: 0; margin: 0; }
 		
         }
 

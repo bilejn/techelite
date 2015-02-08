@@ -1,4 +1,4 @@
-	var cLANGUAGE;
+	var cLANGUAGE = "en";
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
@@ -10,6 +10,7 @@
 		 );
 		 alert(cLANGUAGE);
 	}
+	cLANGUAGE = "sr";
 
 var locals= {
     'en': {
@@ -76,7 +77,7 @@ var locals= {
 		InvitationEmail: "E-posta",
 		InvitationAnotherContactInfo: "Ostali podaci",
 		
-		gender: "Pol",		
+		InvitationGender: "Pol",		
 		male: "Musko",
 		female: "Zensko",
 		
