@@ -53,7 +53,7 @@
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
 	<gap:plugin name="nl.x-services.plugins.toast" version="2.0" />
 	<gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
-	<plugin name="Globalization" value="org.apache.cordova.Globalization"  version="0.1.0"/>
+	<gap:plugin name="org.apache.cordova.globalization" version="0.3.1" />
     <!--
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
