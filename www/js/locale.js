@@ -1,10 +1,11 @@
-	var cLANGUAGE;
+	var cLANGUAGE = "sr";
 
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
 		    function (locale) {
 				cLANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
+				$("#home").trigger("pagebeforeshow");
 		    },
 		    //On Failure set language to english
 		    function () {
