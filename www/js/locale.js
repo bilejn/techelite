@@ -1,15 +1,16 @@
-	var cLANGUAGE = "en";
-	var LANGUAGE;
+	var cLANGUAGE;
+
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
 		    function (locale) {
-			alert(locale.value);
+				cLANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
 		    },
 		    //On Failure set language to english
-		    function () {}
+		    function () {
+				cLANGUAGE = "en";
+			}
 		 );
-
 	}
 
 
