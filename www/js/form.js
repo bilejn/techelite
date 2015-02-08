@@ -47,7 +47,7 @@ var form = (function() {
 		/* Check InvitationNationality */						
 				var value = $("#InvitationNationality").val();
 						data.InvitationNationality = parseInt(value);
-					if (value == "Nationality"){
+					if (value == "0"){
 						var p = $('p[for="InvitationNationality"]');
 						p.addClass("invalid");
 						ok = false;
@@ -56,7 +56,7 @@ var form = (function() {
 		/* Check InvitationLanguage */						
 				var value = $("#InvitationLanguage").val();
 					data.InvitationLanguage = parseInt(value);
-					if (value == "Language"){
+					if (value == "0"){
 						var p = $('p[for="InvitationLanguage"]');
 						p.addClass("invalid");
 						ok = false;

@@ -7,17 +7,22 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"> 
 
 			<link rel="stylesheet" href="css/jquery.mobile-1.4.2.css" />
+			<link rel="stylesheet" href="css/mySwatch.css" />
 			<link rel="stylesheet" href="css/elitetech.css" />
 			
-			<script  type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+			<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 			<script type="text/javascript" src="phonegap.js"></script>
 			<script type="text/javascript" src="js/jstorage.js"></script>
 			<script type="text/javascript" src="js/controller.js"></script>
 			<script type="text/javascript" src="js/network.js"></script>
 			<script type="text/javascript" src="js/form.js"></script>
 			<script type="text/javascript" src="js/view.js"></script>
+			<script type="text/javascript" src="js/locale.js"></script>
 			<script type="text/javascript">
 				$(document).bind("mobileinit", function() {
+					$.support.cors = true;
+					$.mobile.allowCrossDomainPages = true;
+					$.mobile.pushStateEnabled = false;
 					$.mobile.defaultPageTransition = "none";
 					$.mobile.defaultDialogTransition = "none";
 					$.mobile.listview.prototype.options.dividerTheme = "b";
@@ -34,122 +39,121 @@
 	<body >		
 			
 			
-		<section id="home" data-role="page" >
+		<section id="home" data-role="page"  data-theme="f" >
 
-			<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="a">
+			<div data-role="header" data-position="fixed"  data-tap-toggle="false" class="header-style" data-theme="f">
 				<div class="my-header-grid ui-grid-a">
 					<div class="ui-block-a">
 									<img src="img/logo.png" />
 								</div>
 								<div class="ui-block-b">
-									<h1>Invitation Form</h1>
+									<h1 id="header_title"></h1>
 								</div>
 					</div>
 			</div>
 					
 					
-			<div data-role="content" id="content" data-theme="a" class="noLine">
+			<div data-role="content" id="content" data-theme="f" class="noLine">
 
 					   <form id="generalData" name="generalData" action="" onsubmit="return form.invitationForm();"  data-ajax="false" >
 
 						
-						<h4>The person you want to invite:</h4>
+						<h4 id="header_person"></h4>
 						<div class="my-form-grid ui-grid-a">
 							<div class="ui-block-a">
-								<input type="text" name="InvitationFirstname" id="InvitationFirstname" value="" placeholder="First name" />
+								<input type="text" name="InvitationFirstname" id="InvitationFirstname" value=""/>
 							</div>
 							<div class="ui-block-b"><p class="required" for="InvitationFirstname"></p></div>
 							<div class="ui-block-a">
-								<input  type="text" name="InvitationLastname" id="InvitationLastname" value="" placeholder="Last name"/>
+								<input  type="text" name="InvitationLastname" id="InvitationLastname" value=""/>
 							</div>
 							<div class="ui-block-b"><p class="required" for ="InvitationLastname" ></p></div>
 
 								<div class="ui-block-a">
 									<select name="InvitationNationality" id="InvitationNationality">
-										<option  >Nationality</option>
-										<option value="1">Brazil</option>
-										<option value="2">Canada</option>
-										<option value="3">China</option>
-										<option value="4">Japan</option>
-										<option value="5">Spain</option>
-										<option value="6">UK</option>
-										<option value="7">USA</option>
+										<option value="0"></option>
+										<option value="1"></option>
+										<option value="2"></option>
+										<option value="3"></option>
+										<option value="4"></option>
+										<option value="5"></option>
+										<option value="6"></option>
+										<option value="7"></option>
 									</select>
 								</div>
 								<div class="ui-block-b"><p class="required" for ="InvitationNationality" ></p></div>
+								
+								
 								<div class="ui-block-a">
 								
 									<select name="InvitationLanguage" id="InvitationLanguage">
-										<option>Language</option>
-										<option value="1">Arabic</option>
-										<option value="2">English</option>
+										<option value="0"></option>
+										<option value="1"></option>
+										<option value="2"></option>
 									</select>
 								</div>
 								<div class="ui-block-b"><p class="required"  for="InvitationLanguage" ></p></div>
 								
 							
 								<div class="ui-block-a">
-									<input type="text" name="InvitationPhoneNo" id="InvitationPhoneNo" value="" placeholder="Phone number"/>
+									<input type="text" name="InvitationPhoneNo" id="InvitationPhoneNo" value="" />
 								</div>
 								<div class="ui-block-b"></div>
 								
 								<div class="ui-block-a">
-									<input type="text" name="InvitationEmail" id="InvitationEmail" value="" placeholder="E-mail"/>
+									<input type="text" name="InvitationEmail" id="InvitationEmail" value="" />
 								</div>
 								<div class="ui-block-b"><p class="required" for="InvitationEmail"></p></div>
 								
 								<div class="ui-block-a">
-									<input type="text" name="InvitationAnotherContactInfo" id="InvitationAnotherContactInfo" value="" placeholder="Other contact info"/>
+									<input type="text" name="InvitationAnotherContactInfo" id="InvitationAnotherContactInfo" value="" />
 								</div>
 								<div class="ui-block-b"></div>
 								
 								<div class="ui-block-a">
 									<fieldset data-role="controlgroup" data-type="horizontal">
 										<input type="radio" name="InvitationGender" id="male" value="male"/>
-										<label for="male">Male &nbsp &nbsp</label>
+										<label for="male"></label>
 										<input type="radio" name="InvitationGender" id="female" value="female"/>
-										<label for="female">Female</label>
+										<label for="female"></label>
 									</fieldset>
 								</div>
 								<div class="ui-block-b"><p class="required" for="InvitationGender"></p></div>
 								
 								<div class="ui-block-a">
-									<input type="text" name="InvitationStatus" id="InvitationStatus" value="" placeholder="Status"/>
+									<input type="text" name="InvitationStatus" id="InvitationStatus" value=""/>
 								</div>
 								<div class="ui-block-b"><p class="required" for="InvitationStatus"></p></div></div>
 								
-								
-								
-								
-								<hr />
-								<h4>Another contact information:</h4>	
+
+								<h4 id="header_inviter"></h4>	
 								
 							<div class="my-form-grid ui-grid-a">
 								<div class="ui-block-a">	
-									<input type="text" name="InviterFirstname" id="InviterFirstname" value="" placeholder="Inviter first name">
+									<input type="text" name="InviterFirstname" id="InviterFirstname" value="" >
 								</div>
 								<div class="ui-block-b"><p class="required" for="InviterFirstname">*</p></div>
 								<div class="ui-block-a">
-									<input type="text" name="InviterLastname" id="InviterLastname" value="" placeholder="Inviter last name"/>	
+									<input type="text" name="InviterLastname" id="InviterLastname" value=""/>	
 								</div>
 								<div class="ui-block-b"><p class="required"  for="InviterLastname">*</p></div>
 					
 								<div class="ui-block-a">
-									<input type="text" name="InviterPhoneNo" id="InviterPhoneNo" value="" placeholder="Inviter phone number"/>
+									<input type="text" name="InviterPhoneNo" id="InviterPhoneNo" value=""/>
 								</div>
 								<div class="ui-block-b"><p class="required" for="InviterPhoneNo">*</p></div>
 								<div class="ui-block-a">
-									<input type="text" name="InviterEmail" id="InviterEmail" value="" placeholder="Inviter e-mail"/>	
+									<input type="text" name="InviterEmail" id="InviterEmail" value=""/>	
 								</div>
 								<div class="ui-block-b"><p class="required" for="InviterEmail">*</p></div>
 								</div>	
 								
 							<div class="buttons-grid ui-grid-a">
 								<div class="ui-block-a">
-								<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check" />
+								<input type="submit"  id="submit" data-role="button" data-icon="check" />
 								</div>
 								<div class="ui-block-b">
-									<a href="" data-role="button" onclick = "form.deleteJson();"  data-icon="delete">Clear</a>
+									<a href="" data-role="button" onclick = "form.deleteJson();"  id="clear" data-icon="delete"></a>
 								</div>
 							</div>
 						</form>
