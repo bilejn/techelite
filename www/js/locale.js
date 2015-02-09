@@ -69,7 +69,21 @@ var locals= {
 		InviterEmail: "Inviter e-mail",
 		
 		submit: "Submit",
-		clear: 'Clear'
+		clear: 'Clear',
+		
+		
+		/* alerts*/
+		
+		fillAll: 'Fill all required fields',
+		confirmDelete: 'Cancel delete?',
+		cancelDelete: 'Cancelled',
+		
+		/*confirm*/
+		
+		confirm_title:'Confirm and send',
+		send_button: 'Send',
+		back_button: 'Back'
+		
     },
 	
     'sr': {
@@ -110,7 +124,20 @@ var locals= {
 		InviterEmail: "E-posta",
 		
 		submit: "Posalji",
-		clear: 'Obrisi'
+		clear: 'Obrisi',
+		
+		/* alerts*/
+		
+		fillAll: 'Molimo ispunite sva obavezna polja.',
+		confirmDelete: 'Otkazi brisanje?',
+		cancelDelete: 'Otkazano',
+		
+		/*confirm*/
+		
+		confirm_title:'Potvrdi i posalji',
+		send_button: 'Posalji',
+		back_button: 'Nazad'
+		
     }
 };
 

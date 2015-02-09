@@ -47,6 +47,11 @@ $(document).on("pagebeforeshow", "#home", function (){
 
 $(document).on("pagebeforeshow", "#confirm", function (){
 
+		$("#header_title_confirm").html(locals[cLANGUAGE].header_title);
+		$("#confirm_title").html(locals[cLANGUAGE].confirm_title);
+		$("#send").html(locals[cLANGUAGE].send_button);
+		$("#back").html(locals[cLANGUAGE].back_button);
+
 		var names = {
 			InvitationFirstname : locals[cLANGUAGE].InvitationFirstname,
 			InvitationLastname: locals[cLANGUAGE].InvitationLastname,
@@ -71,8 +76,7 @@ $(document).on("pagebeforeshow", "#confirm", function (){
 		}		
 		output = output + '</div>';
 		$("#reviewInvitation").html(output);
-		
-		
+	
 		$("#confirm").trigger("create");
 
 
