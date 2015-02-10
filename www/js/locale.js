@@ -1,4 +1,4 @@
-	var cLANGUAGE = "sr";
+	var cLANGUAGE = "ar";
 
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
@@ -32,13 +32,13 @@
 
 var locals= {
     'en': {
-        header_title: "Invitation Form",
+        header_title: "Invite Me",
         header_person: "The person you want to invite:",
         InvitationFirstname: "First name", 
         InvitationLastname: "Last name", 
 
 
-        nationality_title: 'Nationality:',
+        nationality_title: 'Nationality',
         nationality_1: 'Brazil',
         nationality_2: 'Canada',
         nationality_3: 'China',
@@ -47,7 +47,7 @@ var locals= {
 		nationality_6: 'UK',
 		nationality_7: 'USA',
 		
-		language_title: 'Language:',
+		language_title: 'Language',
 		language_1: 'Arabic',
 		language_2: 'English',
 		
@@ -87,7 +87,7 @@ var locals= {
     },
 	
     'sr': {
-        header_title: "Pozivnica",
+        header_title: "Pozovi me",
         header_person: "Osoba koju pozivate:",
         InvitationFirstname: "Ime", 
         InvitationLastname: "Prezime",
@@ -138,7 +138,58 @@ var locals= {
 		send_button: 'Posalji',
 		back_button: 'Nazad'
 		
-    }
+    },
+	
+	'ar': {
+        header_title: "ادعني",
+		header_person:	"الشخص المراد دعوته للإسلام:",
+		InvitationFirstname: "الاسم الأول", 
+		InvitationLastname:	"الاسم الأخير", 
+		
+		nationality_title: 'الجنسية',
+        nationality_1: 'البرازيل',
+        nationality_2: 'كندا',
+		nationality_3: 'الصين',
+		nationality_4: 'اليابان',
+		nationality_5: 'اسبانيا',
+		nationality_6: 'المملكة المتحدة',
+		nationality_7: 'الولايات المتحدة الأمريكية',
+		
+		language_title: 'اللغة',
+		language_1: 'العربية',
+		language_2: 'الأنكليزية',
+		
+		InvitationPhoneNo: "رقم الأتصال",
+		InvitationEmail: "البريد الإلكتروني",
+		InvitationAnotherContactInfo: "بيانات شخص آخر",
+
+		gender: "الجنس",
+		male: "ذكر &nbsp &nbsp",
+		female: "انثى",
+		
+		InvitationStatus: "الحالة",
+		
+		header_inviter: "بيانات الداعي",
+		InviterLastname: "الاسم الأخير لداعي",
+		InviterPhoneNo: "رقم الاتصال بالداعي",
+		InviterEmail: "البريد الإلكتروني لداعي",
+		
+		submit: "ارسال",
+		clear: 'تصفية الحقول',
+		
+	/* alerts*/
+		
+	fillAll: 'الرجاء تعبئة جميع الحقول',
+	confirmDelete: 'التأكد من الحذف؟',
+	cancelDelete: 'تم الإلغاء',
+		
+	/*confirm*/
+
+	confirm_title:'هل متأكد من البيانات؟',
+	send_button: 'ارسل',
+	back_button: 'الرجوع'
+}
+	
 };
 
 
