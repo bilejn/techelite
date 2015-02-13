@@ -1,11 +1,11 @@
-	var cLANGUAGE = "ar";
+	var cLANGUAGE = "en";
 
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
 		    //Get Language from Settings
 		    function (locale) {
 				var LANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
-
+			//Check if language exists and set it as apps language
 				if (checkLanguageExists(LANGUAGE)){
 					cLANGUAGE = LANGUAGE;
 					$("#home").trigger("pagebeforeshow");
@@ -14,11 +14,13 @@
 		    },
 		    //On Failure set language to english
 		    function () {
-				cLANGUAGE = "en";
+				cLANGUAGE = "ar";
 			}
 		 );
 	}
 	
+	
+	// check if support exists for default language
 	function checkLanguageExists(lang){
 		var arr = Object.keys(locals);
 		for (var i = 0; i < arr.length;  i++){
@@ -30,6 +32,24 @@
 	}
 
 
+	
+	// load rtl css if language is Arabic
+	function loadar(){
+
+/* 	  var filerefjs=document.createElement('script')
+	  filerefjs.setAttribute("type","text/javascript")
+	  filerefjs.setAttribute("src", "js/rtl.jquery.mobile-1.4.0.js");
+		document.getElementsByTagName("head")[0].appendChild(filerefjs); */
+
+	  var filerefcss=document.createElement("link")
+	  filerefcss.setAttribute("rel", "stylesheet")
+	  filerefcss.setAttribute("type", "text/css")
+	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
+		document.getElementsByTagName("head")[0].appendChild(filerefcss);
+
+	}
+	
+	
 var locals= {
     'en': {
         header_title: "Invite Me",

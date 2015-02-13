@@ -132,6 +132,10 @@ label.ui-btn {
 	border-style: solid;
 }
 
+.rtl {
+    direction: rtl;
+}
+
 
 
 
