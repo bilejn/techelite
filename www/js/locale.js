@@ -9,12 +9,15 @@
 				if (checkLanguageExists(LANGUAGE)){
 					cLANGUAGE = LANGUAGE;
 					$("#home").trigger("pagebeforeshow");
+				} else {
+					cLANGUAGE = "ar";
+					$("#home").trigger("pagebeforeshow");				
 				}
 				
 		    },
 		    //On Failure set language to english
 		    function () {
-				cLANGUAGE = "ar";
+				cLANGUAGE = "en";
 			}
 		 );
 	}
