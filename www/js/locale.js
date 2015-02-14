@@ -1,4 +1,4 @@
-	var cLANGUAGE = "en";
+	var cLANGUAGE = "ar";
 
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
@@ -49,7 +49,7 @@
 	  filerefcss.setAttribute("type", "text/css")
 	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
 		document.getElementsByTagName("head")[0].appendChild(filerefcss);
-		$("#home").trigger("pagebeforeshow");
+		window.location.reload(true);
 
 	}
 	
