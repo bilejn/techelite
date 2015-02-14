@@ -49,7 +49,7 @@
 	  filerefcss.setAttribute("type", "text/css")
 	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
 		document.getElementsByTagName("head")[0].appendChild(filerefcss);
-		$("#home").trigger("create");
+		$("#home").trigger("pagebeforeshow");
 
 	}
 	
@@ -194,6 +194,8 @@ var locals= {
 		InvitationStatus: "الحالة",
 		
 		header_inviter: "بيانات الداعي",
+		
+		InviterFirstname: "Ime",
 		InviterLastname: "الاسم الأخير لداعي",
 		InviterPhoneNo: "رقم الاتصال بالداعي",
 		InviterEmail: "البريد الإلكتروني لداعي",
