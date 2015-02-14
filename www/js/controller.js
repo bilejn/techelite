@@ -7,10 +7,14 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 		if (cLANGUAGE == "ar"){
 			loadar();
 		}
+		
 	}
 
 	$(function (){
 	
 		$("#generalData p").html("*");
+		if(cLANGUAGE == "ar"){
+			loadar();			
+		}
 
 	});
