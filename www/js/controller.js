@@ -13,8 +13,8 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 	$(function (){
 	
 		$("#generalData p").html("*");
-/* 		if (cLANGUAGE == "ar"){
+		if (cLANGUAGE == "ar"){
 			loadar();
-		}  */
+		} 
 
 	});
