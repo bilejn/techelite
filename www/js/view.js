@@ -1,5 +1,13 @@
 
 $(document).on("pagebeforeshow", "#home", function (){
+	var cLANGUAGE;
+	if ($.jStorage.get("lang")==null){
+			cLANGUAGE = "en";	
+			$.jStorage.set("lang", cLANGUAGE);
+		}else {
+			cLANGUAGE = $.jStorage.get("lang");	
+	}
+
 	
 	$("#header_title").html(locals[cLANGUAGE].header_title);
 	$("#header_person").html(locals[cLANGUAGE].header_person);

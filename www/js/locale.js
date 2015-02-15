@@ -1,8 +1,4 @@
-	if ($.jStorage.get("lang")==null){
-		var cLANGUAGE = "en";		
-	}else {
-		var cLANGUAGE = $.jStorage.get("lang");	
-	}
+
 
 
 	function checkLanguage(){
@@ -12,24 +8,18 @@
 				var LANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
 			//Check if language exists and set it as apps language
 				if (checkLanguageExists(LANGUAGE)){
-					cLANGUAGE = LANGUAGE;
-					$.jStorage.set("lang", cLANGUAGE);
-					$("#home").trigger("pagebeforeshow");
+					return LANGUAGE;
 				} else {
-					cLANGUAGE = "ar";	
-					$.jStorage.set("lang", cLANGUAGE);
+					return "ar";	
 				}
-				
 		    },
 		    //On Failure set language to english
 		    function () {
-				cLANGUAGE = "en";
-				$.jStorage.set("lang", cLANGUAGE);
+				return "en";
+
 			}
 		 );
-		 if (cLANGUAGE == "ar"){
-			loadar();
-		}
+		 
 	}
 	
 	
@@ -45,9 +35,8 @@
 	}
 
 	// load rtl css if language is Arabic
-	function loadar(){
+	function loadRTL(){
 
-		
 		document.getElementsByTagName("head")[0].removeChild(document.getElementById("css"));
 		document.getElementsByTagName("head")[0].removeChild(document.getElementById("js"));
 
