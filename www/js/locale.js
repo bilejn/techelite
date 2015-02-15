@@ -19,6 +19,9 @@
 				cLANGUAGE = "en";
 			}
 		 );
+		 if (cLANGUAGE == "ar"){
+			loadar();
+		}
 	}
 	
 	
