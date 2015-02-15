@@ -6,8 +6,6 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 		checkLanguage();
 		if (cLANGUAGE == "ar"){
 			loadar();
-		} else {
-			loaden();
 		}
 		
 	}
@@ -15,6 +13,8 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 	$(function (){
 	
 		$("#generalData p").html("*");
-
+/* 		if (cLANGUAGE == "ar"){
+			loadar();
+		}  */
 
 	});
