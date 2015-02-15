@@ -5,7 +5,9 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 	
 		checkConnection();
 		setLanguage();
-	
+		if (cLANGUAGE === "ar"){
+			loadRTL();		
+		}
 	}
 
 	$(function (){
@@ -23,9 +25,7 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 					$.jStorage.set("lang", previous);	
 					window.location.reload(true);				
 			}
-			if ($.jStorage.get("lang") == "ar"){
-					loadRTL();		
-			}
+
 	}
 		
 	function loadRTL(){

@@ -7,6 +7,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 		}else {
 			cLANGUAGE = $.jStorage.get("lang");	
 	}
+		
 
 	
 	$("#header_title").html(locals[cLANGUAGE].header_title);
