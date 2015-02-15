@@ -8,11 +8,11 @@
 				var LANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
 				alert(LANGUAGE);
 				var previous = $.jStorage.get("lang");
-					if (previous != lang){
+					if (previous != LANGUAGE){
 						alert(previous+' '+LANGUAGE);
 							//Check if language exists and set it as apps language
 							if (checkLanguageExists(LANGUAGE)){
-								$.jStorage.set("lang", cLANGUAGE);
+								$.jStorage.set("lang", LANGUAGE);
 							} else {
 								$.jStorage.set("lang", "ar");	
 							}	
