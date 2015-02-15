@@ -8,10 +8,11 @@
 			//Check if language exists and set it as apps language
 				if (checkLanguageExists(LANGUAGE)){
 					cLANGUAGE = LANGUAGE;
+					alert (cLANGUAGE);
 					$("#home").trigger("pagebeforeshow");
 				} else {
-					cLANGUAGE = "ar";
-					$("#home").trigger("pagebeforeshow");				
+					cLANGUAGE = "ar";	
+					alert (cLANGUAGE);
 				}
 				
 		    },
@@ -46,10 +47,7 @@
 	  filerefcss.setAttribute("type", "text/css")
 	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
 		document.getElementsByTagName("head")[0].appendChild(filerefcss);
-	
 
-		
-		
 		$("#home").trigger("pagebeforeshow");
 		/* $("#home").page("refresh"); */
 
