@@ -8,11 +8,9 @@
 			//Check if language exists and set it as apps language
 				if (checkLanguageExists(LANGUAGE)){
 					cLANGUAGE = LANGUAGE;
-					alert (cLANGUAGE);
 					$("#home").trigger("pagebeforeshow");
 				} else {
 					cLANGUAGE = "ar";	
-					alert (cLANGUAGE);
 				}
 				
 		    },
