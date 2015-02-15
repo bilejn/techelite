@@ -22,8 +22,9 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 		var lang = checkLanguage();
 		var previous = $.jStorage.get("lang");
 			if (previous != lang){
-					$.jStorage.set("lang", previous);	
-					window.location.reload(true);				
+			alert ("different");
+					/* $.jStorage.set("lang", previous);	
+					window.location.reload(true);	 */			
 			}
 	}
 		
