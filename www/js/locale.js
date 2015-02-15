@@ -56,22 +56,21 @@
 	// load rtl css if language is Arabic
 	function loadar(){
 
+		
+		document.getElementsByTagName("head")[0].removeChild(document.getElementById("css"));
+		document.getElementsByTagName("head")[0].removeChild(document.getElementById("js"));
+
 	  var filerefcss=document.createElement("link")
 	  filerefcss.setAttribute("rel", "stylesheet")
 	  filerefcss.setAttribute("type", "text/css")
 	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
 		document.getElementsByTagName("head")[0].appendChild(filerefcss);
+	
 
-	  var filerefjs=document.createElement('script')
-	  filerefjs.setAttribute("type","text/javascript")
-	  filerefjs.setAttribute("src", "js/rtl.jquery.mobile-1.4.0.js");
-		document.getElementsByTagName("head")[0].appendChild(filerefjs);		
-		
-		document.getElementsByTagName("head")[0].removeChild(document.getElementById("css"));
-		document.getElementsByTagName("head")[0].removeChild(document.getElementById("js"));
 		
 		
-		$("#home").trigger("pagebeforeshow");
+		/* $("#home").trigger("pagebeforeshow"); */
+		/* $("#home").page("refresh"); */
 
 	}
 	
