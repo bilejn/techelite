@@ -6,18 +6,21 @@
 		    //Get Language from Settings
 		    function (locale) {
 				var LANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
+				var previous = $.jStorage.get("lang");
+					if (previous != lang){
+							//Check if language exists and set it as apps language
+							if (checkLanguageExists(LANGUAGE)){
+								$.jStorage.set("lang", cLANGUAGE);
+							} else {
+								$.jStorage.set("lang", "ar");	
+							}	
+							 window.location.reload(true);
+					}
 
-			//Check if language exists and set it as apps language
-				if (checkLanguageExists(LANGUAGE)){
-					alert (LANGUAGE);
-					return LANGUAGE;
-				} else {
-					return "ar";	
-				}
 		    },
 		    //On Failure set language to english
 		    function () {
-				return "en";
+	
 			}
 		 );
 	}
@@ -35,7 +38,21 @@
 	}
 
 	// load rtl css if language is Arabic
+	function loadRTL(){
 
+		document.getElementsByTagName("head")[0].removeChild(document.getElementById("css"));
+		document.getElementsByTagName("head")[0].removeChild(document.getElementById("js"));
+
+	  var filerefcss=document.createElement("link")
+	  filerefcss.setAttribute("rel", "stylesheet")
+	  filerefcss.setAttribute("type", "text/css")
+	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
+		document.getElementsByTagName("head")[0].appendChild(filerefcss);
+
+	
+		/* $("#home").page("refresh"); */
+
+	}
 	
 
 
