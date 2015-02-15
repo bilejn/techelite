@@ -6,6 +6,7 @@
 		    //Get Language from Settings
 		    function (locale) {
 				var LANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
+				alert (LANGUAGE);
 			//Check if language exists and set it as apps language
 				if (checkLanguageExists(LANGUAGE)){
 					return LANGUAGE;
