@@ -1,4 +1,9 @@
-	var cLANGUAGE = "en";
+	if ($.jStorage.get("lang")==null){
+		var cLANGUAGE = "en";		
+	}else {
+		var cLANGUAGE = $.jStorage.get("lang");	
+	}
+
 
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
@@ -8,15 +13,18 @@
 			//Check if language exists and set it as apps language
 				if (checkLanguageExists(LANGUAGE)){
 					cLANGUAGE = LANGUAGE;
+					$.jStorage.set("lang", cLANGUAGE);
 					$("#home").trigger("pagebeforeshow");
 				} else {
 					cLANGUAGE = "ar";	
+					$.jStorage.set("lang", cLANGUAGE);
 				}
 				
 		    },
 		    //On Failure set language to english
 		    function () {
 				cLANGUAGE = "en";
+				$.jStorage.set("lang", cLANGUAGE);
 			}
 		 );
 		 if (cLANGUAGE == "ar"){
