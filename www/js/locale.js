@@ -1,4 +1,4 @@
-	var cLANGUAGE = "ar";
+	var cLANGUAGE = "en";
 
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(
@@ -8,10 +8,10 @@
 			//Check if language exists and set it as apps language
 				if (checkLanguageExists(LANGUAGE)){
 					cLANGUAGE = LANGUAGE;
-					$("#home").trigger("pagebeforeshow");
+				/* 	$("#home").trigger("pagebeforeshow"); */
 				} else {
 					cLANGUAGE = "ar";
-					$("#home").trigger("pagebeforeshow");				
+				/* 	$("#home").trigger("pagebeforeshow");	 */			
 				}
 				
 		    },
@@ -34,21 +34,40 @@
 		return false;
 	}
 
+	// load ltr css if language is English
+	function loaden(){
 
+	  var filerefcss=document.createElement("link")
+	  filerefcss.setAttribute("rel", "stylesheet")
+	  filerefcss.setAttribute("type", "text/css")
+	  filerefcss.setAttribute("href", "css/jquery.mobile-1.4.2.css");
+		document.getElementsByTagName("head")[0].appendChild(filerefcss);
+
+	  var filerefjs=document.createElement('script')
+	  filerefjs.setAttribute("type","text/javascript")
+	  filerefjs.setAttribute("src", "js/jquery.mobile-1.4.2.js");
+		document.getElementsByTagName("head")[0].appendChild(filerefjs);		
+		
+		
+		$("#home").trigger("pagebeforeshow");
+
+	}
 	
 	// load rtl css if language is Arabic
 	function loadar(){
-
-/* 	  var filerefjs=document.createElement('script')
-	  filerefjs.setAttribute("type","text/javascript")
-	  filerefjs.setAttribute("src", "js/rtl.jquery.mobile-1.4.0.js");
-		document.getElementsByTagName("head")[0].appendChild(filerefjs); */
 
 	  var filerefcss=document.createElement("link")
 	  filerefcss.setAttribute("rel", "stylesheet")
 	  filerefcss.setAttribute("type", "text/css")
 	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
 		document.getElementsByTagName("head")[0].appendChild(filerefcss);
+
+	  var filerefjs=document.createElement('script')
+	  filerefjs.setAttribute("type","text/javascript")
+	  filerefjs.setAttribute("src", "js/rtl.jquery.mobile-1.4.0.js");
+		document.getElementsByTagName("head")[0].appendChild(filerefjs);		
+		
+		
 		$("#home").trigger("pagebeforeshow");
 
 	}

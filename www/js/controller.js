@@ -6,6 +6,8 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 		checkLanguage();
 		if (cLANGUAGE == "ar"){
 			loadar();
+		} else {
+			loaden();
 		}
 		
 	}
