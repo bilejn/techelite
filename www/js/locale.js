@@ -6,6 +6,7 @@
 		    //Get Language from Settings
 		    function (locale) {
 				var LANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
+				alert(LANGUAGE);
 				var previous = $.jStorage.get("lang");
 					if (previous != lang){
 						alert(previous+' '+LANGUAGE);
