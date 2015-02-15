@@ -1,4 +1,4 @@
-	var cLANGUAGE = "ar";
+	var cLANGUAGE = "en";
 
 	function checkLanguage(){
 		navigator.globalization.getPreferredLanguage(

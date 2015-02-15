@@ -1,13 +1,12 @@
 
 document.addEventListener("deviceready", OnDeviceReady, false);
 
-	function OnDeviceReady()    {
+	function OnDeviceReady(){
 		checkConnection();
 		checkLanguage();
 		if (cLANGUAGE == "ar"){
 			loadar();
 		}
-		
 	}
 
 	$(function (){
