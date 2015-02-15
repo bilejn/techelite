@@ -4,13 +4,13 @@ $(document).on("pagebeforeshow", "#home", function (){
 	if ($.jStorage.get("lang")==null){
 			cLANGUAGE = "en";	
 			$.jStorage.set("lang", cLANGUAGE);
-		}else {
+	}else{
 			cLANGUAGE = $.jStorage.get("lang");	
 	}
 		
-	if (cLANGUAGE === "ar"){
+/* 	if (cLANGUAGE === "ar"){
 			loadRTL();		
-	}
+	} */
 	
 	$("#header_title").html(locals[cLANGUAGE].header_title);
 	$("#header_person").html(locals[cLANGUAGE].header_person);
