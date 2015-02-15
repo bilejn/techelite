@@ -25,7 +25,6 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 					$.jStorage.set("lang", previous);	
 					window.location.reload(true);				
 			}
-
 	}
 		
 	function loadRTL(){
@@ -39,7 +38,7 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
 		document.getElementsByTagName("head")[0].appendChild(filerefcss);
 
-		$("#home").trigger("pagebeforeshow");
+	
 		/* $("#home").page("refresh"); */
 
 	}
