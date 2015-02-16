@@ -12,11 +12,11 @@
 					} else {
 						$.jStorage.set("lang", "ar");	
 					}
-					if ($.jStorage.get("rtl") != "true" && LANGUAGE == "ar"){
+					if ($.jStorage.get("rtl") != "true" && $.jStorage.get("lang") == "ar"){
 						$.jStorage.set("rtl", "true");
 						window.location.reload(true);					
 					}
-					if ($.jStorage.get("rtl") == "true" && LANGUAGE != "ar"){
+					if ($.jStorage.get("rtl") == "true" && $.jStorage.get("lang") != "ar"){
 						$.jStorage.set("rtl", "false");
 						window.location.reload(true);					
 					}
