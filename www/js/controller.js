@@ -11,7 +11,9 @@ document.addEventListener("deviceready", OnDeviceReady, false);
 	$(function (){
 
 		$("#generalData p").html("*");
-
+		if ($.jStorage.get("rtl") == "true"){
+			loadRTL();
+		}
 	});
 	
 

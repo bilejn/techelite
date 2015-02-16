@@ -6,18 +6,21 @@
 		    //Get Language from Settings
 		    function (locale) {
 				var LANGUAGE = locale.value.charAt(0) + locale.value.charAt(1);
-				alert(LANGUAGE);
-				var previous = $.jStorage.get("lang");
-					if (previous != LANGUAGE){
-						alert(previous+' '+LANGUAGE);
-							//Check if language exists and set it as apps language
-							if (checkLanguageExists(LANGUAGE)){
-								$.jStorage.set("lang", LANGUAGE);
-							} else {
-								$.jStorage.set("lang", "ar");	
-							}	
-							 window.location.reload(true);
+					//Check if language exists and set it as apps language
+					if (checkLanguageExists(LANGUAGE)){
+						$.jStorage.set("lang", LANGUAGE);
+					} else {
+						$.jStorage.set("lang", "ar");	
 					}
+					if ($.jStorage.get("rtl") != "true" && LANGUAGE == "ar"){
+						$.jStorage.set("rtl", "true");
+						window.location.reload(true);					
+					}
+					if ($.jStorage.get("rtl") == "true" && LANGUAGE != "ar"){
+						$.jStorage.set("rtl", "false");
+						window.location.reload(true);					
+					}
+			
 
 		    },
 		    //On Failure set language to english
