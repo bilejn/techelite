@@ -8,7 +8,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 			cLANGUAGE = $.jStorage.get("lang");	
 	}
 		
-	var data = $.jStorage("json_data");
+	var data = $.jStorage.get("json_data");
 	
 	$("#header_title").html(locals[cLANGUAGE].header_title);
 	$("#header_person").html(locals[cLANGUAGE].header_person);
