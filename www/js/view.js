@@ -8,12 +8,20 @@ $(document).on("pagebeforeshow", "#home", function (){
 			cLANGUAGE = $.jStorage.get("lang");	
 	}
 		
-
+	var data = $.jStorage("json_data");
 	
 	$("#header_title").html(locals[cLANGUAGE].header_title);
 	$("#header_person").html(locals[cLANGUAGE].header_person);
-	$("#InvitationFirstname").attr("placeholder", locals[cLANGUAGE].InvitationFirstname);
+	
+	if (data.InvitationFirstname == null){
+		$("#InvitationFirstname").attr("placeholder", locals[cLANGUAGE].InvitationFirstname);	
+	} else {
+		$("#InvitationFirstname").val(data.InvitationFirstname);	
+	}
+	
 	$("#InvitationLastname").attr("placeholder", locals[cLANGUAGE].InvitationLastname);
+	
+
 	
     $('[name=InvitationNationality]  option[value="0"]').html(locals[cLANGUAGE].nationality_title);
 	$('[name=InvitationNationality]  option[value="1"]').html(locals[cLANGUAGE].nationality_1);

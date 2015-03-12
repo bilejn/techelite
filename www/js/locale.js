@@ -10,7 +10,7 @@
 					if (checkLanguageExists(LANGUAGE)){
 						$.jStorage.set("lang", LANGUAGE);
 					} else {
-						$.jStorage.set("lang", "en");	
+						$.jStorage.set("lang", "ar");	
 					}
 					if ($.jStorage.get("rtl") != "true" && $.jStorage.get("lang") == "ar"){
 						$.jStorage.set("rtl", "true");
