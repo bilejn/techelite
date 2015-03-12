@@ -95,13 +95,13 @@ var form = (function() {
 					}	
 					
 		/* Check InvitationStatus */			
-				var value = $("#InvitationStatus").val();
-				data.InvitationStatus = parseInt(value);
-					if (value == ""){
+				//var value = $("#InvitationStatus").val();
+				data.InvitationStatus = 1;
+				/* 	if (value == ""){
 						var p = $('p[for="InvitationStatus"]');
 						p.addClass("invalid");
 						ok = false;
-					}
+				} */
 					
 			/* =========== Another contact information: =============== */					
 			
@@ -156,7 +156,25 @@ var form = (function() {
 		
 	
 		sendJson: function () {
-			$.ajax({
+				var param = $.jStorage.get("json_data");
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://www.cuh.org.sa/invite/api/InvitationApi",
+                    data: JSON.stringify(param),
+                    contentType: "text/json",
+                    success: function (data, textStatus, jqXHR) {
+                        alert(JSON.stringify(data));
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert("Error loading list.");
+                    },
+                    complete: function (jqXHR, textStatus) {
+                        alert(textStatus);
+                    }
+                });
+		
+			/* $.ajax({
 				type: "POST",
 				url : "http://www.cuh.org.sa/invite/api/InvitationApi",
 				data: {"InvitationFirstname":"Invitation Firstname 1",
@@ -182,7 +200,9 @@ var form = (function() {
 				complete: function (jqXHR, textStatus){
 					alert(textStatus);
 				}
-			});
+			}); */
+			
+		
 		},
 	
 		/*Method deleteJson deletes "json_data" and reloads the window. The function is called from clear button (home section - end) . */		

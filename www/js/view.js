@@ -8,9 +8,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 			cLANGUAGE = $.jStorage.get("lang");	
 	}
 		
-/* 	if (cLANGUAGE === "ar"){
-			loadRTL();		
-	} */
+
 	
 	$("#header_title").html(locals[cLANGUAGE].header_title);
 	$("#header_person").html(locals[cLANGUAGE].header_person);
@@ -37,7 +35,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 	$('label[for="male"]').html(locals[cLANGUAGE].male);
 	$('label[for="female"]').html(locals[cLANGUAGE].female);
 
-	$("#InvitationStatus").attr("placeholder", locals[cLANGUAGE].InvitationStatus);	
+	//$("#InvitationStatus").attr("placeholder", locals[cLANGUAGE].InvitationStatus);	
 	
 	$("#header_inviter").html(locals[cLANGUAGE].header_inviter);
 
@@ -57,6 +55,14 @@ $(document).on("pagebeforeshow", "#home", function (){
 });
 
 $(document).on("pagebeforeshow", "#confirm", function (){
+
+	var cLANGUAGE;
+	if ($.jStorage.get("lang")==null){
+			cLANGUAGE = "en";	
+			$.jStorage.set("lang", cLANGUAGE);
+	}else{
+			cLANGUAGE = $.jStorage.get("lang");	
+	}
 
 		$("#header_title_confirm").html(locals[cLANGUAGE].header_title);
 		$("#confirm_title").html(locals[cLANGUAGE].confirm_title);

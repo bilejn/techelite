@@ -10,7 +10,7 @@
 					if (checkLanguageExists(LANGUAGE)){
 						$.jStorage.set("lang", LANGUAGE);
 					} else {
-						$.jStorage.set("lang", "ar");	
+						$.jStorage.set("lang", "en");	
 					}
 					if ($.jStorage.get("rtl") != "true" && $.jStorage.get("lang") == "ar"){
 						$.jStorage.set("rtl", "true");
@@ -25,7 +25,7 @@
 		    },
 		    //On Failure set language to english
 		    function () {
-	
+				$.jStorage.set("lang", "en");
 			}
 		 );
 	}
@@ -87,7 +87,7 @@ var locals= {
 		InvitationEmail: "E-mail",
 		InvitationAnotherContactInfo: "Another contact info",
 		
-		gender: "Gender",
+		InvitationGender: "Gender",
 		male: "Male &nbsp &nbsp",
 		female: "Female",
 		
@@ -195,7 +195,7 @@ var locals= {
 		InvitationEmail: "البريد الإلكتروني",
 		InvitationAnotherContactInfo: "بيانات شخص آخر",
 
-		gender: "الجنس",
+		InvitationGender: "الجنس",
 		male: "ذكر &nbsp &nbsp",
 		female: "انثى",
 		
