@@ -26,6 +26,7 @@ var form = (function() {
 				var ok = true;
 				$("#generalData p").removeClass("invalid");
 			
+				alert("entered");
 		/* Check InvitationFirstname */			
 				var value = $("#InvitationFirstname").val();
 					data.InvitationFirstname = value;
@@ -143,10 +144,10 @@ var form = (function() {
 					
 				$.jStorage.set("json_data", data);
 					
-					
 				if (ok){
 					$.mobile.changePage( "#confirm");			
 				} else {
+					var cLANGUAGE = $.jStorage.get("lang");
 					alert(locals[cLANGUAGE].fillAll);
 					$.mobile.changePage( "#home", { allowSamePageTransition: true } );	
 				}
@@ -207,6 +208,7 @@ var form = (function() {
 	
 		/*Method deleteJson deletes "json_data" and reloads the window. The function is called from clear button (home section - end) . */		
 		deleteJson: function () {
+			var cLANGUAGE = $.jStorage.get("lang");
 			var r = confirm(locals[cLANGUAGE].confirmDelete);
 			if (r == true) {
 				 $.jStorage.deleteKey("json_data"); 
