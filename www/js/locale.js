@@ -102,6 +102,7 @@ var locals= {
 		
 		submit: "Submit",
 		clear: 'Clear',
+		sent: "Invitation sent",
 		
 		
 		/* alerts*/
@@ -157,6 +158,7 @@ var locals= {
 		
 		submit: "Posalji",
 		clear: 'Obrisi',
+		sent: "Pozivnica poslata"
 		
 		/* alerts*/
 		
@@ -210,6 +212,7 @@ var locals= {
 		
 		submit: "ارسال",
 		clear: 'تصفية الحقول',
+		sent: "Pozivnica poslata",
 		
 	/* alerts*/
 		

@@ -26,7 +26,6 @@ var form = (function() {
 				var ok = true;
 				$("#generalData p").removeClass("invalid");
 			
-				alert("entered");
 		/* Check InvitationFirstname */			
 				var value = $("#InvitationFirstname").val();
 					data.InvitationFirstname = value;
@@ -165,7 +164,8 @@ var form = (function() {
                     data: JSON.stringify(param),
                     contentType: "text/json",
                     success: function (data, textStatus, jqXHR) {
-                        alert(JSON.stringify(data));
+                        	var cLANGUAGE = $.jStorage.get("lang");
+							alert(locals[cLANGUAGE].sent);
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         alert("Error loading list.");
