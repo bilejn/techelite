@@ -158,7 +158,7 @@ var locals= {
 		
 		submit: "Posalji",
 		clear: 'Obrisi',
-		sent: "Pozivnica poslata"
+		sent: "Pozivnica poslata",
 		
 		/* alerts*/
 		
