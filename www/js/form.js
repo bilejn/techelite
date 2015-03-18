@@ -208,7 +208,7 @@ var form = (function() {
 	
 		/*Method deleteJson deletes "json_data" and reloads the window. The function is called from clear button (home section - end) . */		
 		deleteJson: function () {
-<<<<<<< HEAD
+
 			var cLANGUAGE;
 			if ($.jStorage.get("lang")==null){
 					cLANGUAGE = "en";	
@@ -216,10 +216,7 @@ var form = (function() {
 			}else{
 					cLANGUAGE = $.jStorage.get("lang");	
 			}
-			
-=======
-		
->>>>>>> 84d36b3d7e1ea34b928a90887f2b048d0627b6bb
+
 			var r = confirm(locals[cLANGUAGE].confirmDelete);
 			if (r == true) {
 				 $.jStorage.deleteKey("json_data"); 

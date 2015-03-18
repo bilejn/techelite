@@ -8,12 +8,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 			cLANGUAGE = $.jStorage.get("lang");	
 	}
 		
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 84d36b3d7e1ea34b928a90887f2b048d0627b6bb
 	$("#header_title").html(locals[cLANGUAGE].header_title);
 	$("#header_person").html(locals[cLANGUAGE].header_person);
 	

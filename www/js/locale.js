@@ -159,10 +159,7 @@ var locals= {
 		submit: "Posalji",
 		clear: 'Obrisi',
 		sent: "Pozivnica poslata",
-<<<<<<< HEAD
-=======
-		
->>>>>>> 84d36b3d7e1ea34b928a90887f2b048d0627b6bb
+
 		/* alerts*/
 		
 		fillAll: 'Molimo ispunite sva obavezna polja.',
