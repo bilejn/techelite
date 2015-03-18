@@ -10,7 +10,7 @@
 					if (checkLanguageExists(LANGUAGE)){
 						$.jStorage.set("lang", LANGUAGE);
 					} else {
-						$.jStorage.set("lang", "ar");	
+						$.jStorage.set("lang", "en");	
 					}
 					if ($.jStorage.get("rtl") != "true" && $.jStorage.get("lang") == "ar"){
 						$.jStorage.set("rtl", "true");
@@ -102,6 +102,7 @@ var locals= {
 		
 		submit: "Submit",
 		clear: 'Clear',
+		sent: "Invitation sent",
 		
 		
 		/* alerts*/
@@ -158,6 +159,10 @@ var locals= {
 		submit: "Posalji",
 		clear: 'Obrisi',
 		sent: "Pozivnica poslata",
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 84d36b3d7e1ea34b928a90887f2b048d0627b6bb
 		/* alerts*/
 		
 		fillAll: 'Molimo ispunite sva obavezna polja.',
@@ -210,6 +215,7 @@ var locals= {
 		
 		submit: "ارسال",
 		clear: 'تصفية الحقول',
+		sent: "Pozivnica poslata",
 		
 	/* alerts*/
 		

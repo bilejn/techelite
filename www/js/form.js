@@ -143,10 +143,10 @@ var form = (function() {
 					
 				$.jStorage.set("json_data", data);
 					
-					
 				if (ok){
 					$.mobile.changePage( "#confirm");			
 				} else {
+					var cLANGUAGE = $.jStorage.get("lang");
 					alert(locals[cLANGUAGE].fillAll);
 					// $.mobile.changePage( "#home", { allowSamePageTransition: true } );	 
 				}
@@ -164,7 +164,8 @@ var form = (function() {
                     data: JSON.stringify(param),
                     contentType: "text/json",
                     success: function (data, textStatus, jqXHR) {
-                        alert(JSON.stringify(data));
+                        	var cLANGUAGE = $.jStorage.get("lang");
+							alert(locals[cLANGUAGE].sent);
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         alert("Error loading list.");
@@ -207,6 +208,7 @@ var form = (function() {
 	
 		/*Method deleteJson deletes "json_data" and reloads the window. The function is called from clear button (home section - end) . */		
 		deleteJson: function () {
+<<<<<<< HEAD
 			var cLANGUAGE;
 			if ($.jStorage.get("lang")==null){
 					cLANGUAGE = "en";	
@@ -215,6 +217,9 @@ var form = (function() {
 					cLANGUAGE = $.jStorage.get("lang");	
 			}
 			
+=======
+		
+>>>>>>> 84d36b3d7e1ea34b928a90887f2b048d0627b6bb
 			var r = confirm(locals[cLANGUAGE].confirmDelete);
 			if (r == true) {
 				 $.jStorage.deleteKey("json_data"); 
