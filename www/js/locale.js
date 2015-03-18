@@ -107,7 +107,7 @@ var locals= {
 		/* alerts*/
 		
 		fillAll: 'Fill all required fields',
-		confirmDelete: 'Cancel delete?',
+		confirmDelete: 'Delete?',
 		cancelDelete: 'Cancelled',
 		
 		/*confirm*/
@@ -161,7 +161,7 @@ var locals= {
 		/* alerts*/
 		
 		fillAll: 'Molimo ispunite sva obavezna polja.',
-		confirmDelete: 'Otkazi brisanje?',
+		confirmDelete: 'Obrisi?',
 		cancelDelete: 'Otkazano',
 		
 		/*confirm*/

@@ -148,7 +148,7 @@ var form = (function() {
 					$.mobile.changePage( "#confirm");			
 				} else {
 					alert(locals[cLANGUAGE].fillAll);
-					$.mobile.changePage( "#home", { allowSamePageTransition: true } );	
+					// $.mobile.changePage( "#home", { allowSamePageTransition: true } );	 
 				}
 					
 				return false;
@@ -207,6 +207,14 @@ var form = (function() {
 	
 		/*Method deleteJson deletes "json_data" and reloads the window. The function is called from clear button (home section - end) . */		
 		deleteJson: function () {
+			var cLANGUAGE;
+			if ($.jStorage.get("lang")==null){
+					cLANGUAGE = "en";	
+					$.jStorage.set("lang", cLANGUAGE);
+			}else{
+					cLANGUAGE = $.jStorage.get("lang");	
+			}
+			
 			var r = confirm(locals[cLANGUAGE].confirmDelete);
 			if (r == true) {
 				 $.jStorage.deleteKey("json_data"); 
