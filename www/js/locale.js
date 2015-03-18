@@ -157,7 +157,7 @@ var locals= {
 		
 		submit: "Posalji",
 		clear: 'Obrisi',
-		
+		sent: "Pozivnica poslata",
 		/* alerts*/
 		
 		fillAll: 'Molimo ispunite sva obavezna polja.',
