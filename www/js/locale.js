@@ -205,14 +205,14 @@ var locals= {
 		
 		header_inviter: "بيانات الداعي",
 		
-		InviterFirstname: "Ime",
+		InviterFirstname: "اسم الأول لداعي",
 		InviterLastname: "الاسم الأخير لداعي",
 		InviterPhoneNo: "رقم الاتصال بالداعي",
 		InviterEmail: "البريد الإلكتروني لداعي",
 		
 		submit: "ارسال",
 		clear: 'تصفية الحقول',
-		sent: "Pozivnica poslata",
+		sent: "تم الإرسال",
 		
 	/* alerts*/
 		

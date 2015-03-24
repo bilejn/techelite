@@ -80,6 +80,12 @@
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
+	<gap:splash src="res/screen/android/ar-screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="ar-ldpi" />
+	<gap:splash src="res/screen/android/ar-screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="ar-mdpi" />
+	<gap:splash src="res/screen/android/ar-screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="ar-hdpi" />
+	<gap:splash src="res/screen/android/ar-screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="ar-xhdpi" />
+	
+	
     <gap:splash src="res/screen/blackberry/screen-225.png"         gap:platform="blackberry" />
     <gap:splash src="res/screen/ios/screen-iphone-portrait.png"    gap:platform="ios"     width="320" height="480" />
     <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios"     width="640" height="960" />
