@@ -102,7 +102,8 @@ var locals= {
 		
 		submit: "Submit",
 		clear: 'Clear',
-		sent: "Invitation sent",
+		sent: "Invitation sent.",
+		error: "Error sending invitation.",
 		
 		
 		/* alerts*/
@@ -158,7 +159,8 @@ var locals= {
 		
 		submit: "Posalji",
 		clear: 'Obrisi',
-		sent: "Pozivnica poslata",
+		sent: "Pozivnica poslata.",
+		error: "Greska u slanju pozivnice.",
 
 		/* alerts*/
 		
@@ -213,6 +215,7 @@ var locals= {
 		submit: "ارسال",
 		clear: 'تصفية الحقول',
 		sent: "تم الإرسال",
+		error: "Error sending invitation.",
 		
 	/* alerts*/
 		

@@ -168,10 +168,9 @@ var form = (function() {
 							alert(locals[cLANGUAGE].sent);
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
-                        alert("Error loading list.");
+                        alert(locals[cLANGUAGE].error);
                     },
                     complete: function (jqXHR, textStatus) {
-                        alert(textStatus);
                     }
                 });
 		
