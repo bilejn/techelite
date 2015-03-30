@@ -166,9 +166,11 @@ var form = (function() {
                     success: function (data, textStatus, jqXHR) {
                         	var cLANGUAGE = $.jStorage.get("lang");
 							alert(locals[cLANGUAGE].sent);
+							$.mobile.changePage( "#home");
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         alert(locals[cLANGUAGE].error);
+						$.mobile.changePage( "#home");
                     },
                     complete: function (jqXHR, textStatus) {
                     }
