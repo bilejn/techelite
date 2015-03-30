@@ -157,7 +157,8 @@ var form = (function() {
 	
 		sendJson: function () {
 				var param = $.jStorage.get("json_data");
-
+				$("#send").addClass('ui-disabled');
+				$("#back").addClass('ui-disabled');
                 $.ajax({
                     type: "POST",
                     url: "http://www.cuh.org.sa/invite/api/InvitationApi",
@@ -173,6 +174,8 @@ var form = (function() {
 						$.mobile.changePage( "#home");
                     },
                     complete: function (jqXHR, textStatus) {
+								$("#send").removeClass('ui-disabled');
+								$("#back").removeClass('ui-disabled');
                     }
                 });
 		
