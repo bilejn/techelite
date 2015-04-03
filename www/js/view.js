@@ -22,7 +22,8 @@ $(document).on("pagebeforeshow", "#home", function (){
 	// ================================== NATIONALITY ============================================//
 	
 	$('<select>').attr({'name':'InvitationNationality','id':'InvitationNationality','data-native-menu':'false'}).appendTo('#nationalities');
-	for (i=0; i < locals[cLANGUAGE].nationality.length; i++){
+	$('<option>').html(locals[cLANGUAGE].nationality[0]).appendTo('#InvitationNationality');	
+	for (i=1; i < locals[cLANGUAGE].nationality.length; i++){
 	     $('<option>').attr({'value':i}).html(locals[cLANGUAGE].nationality[i]).appendTo('#InvitationNationality');
 	}
 	$('#InvitationNationality').selectmenu();
