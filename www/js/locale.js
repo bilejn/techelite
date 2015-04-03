@@ -59,7 +59,7 @@
 
 
 	
-var locals= {
+var locals = {
     'en': {
         header_title: "Invite Me",
         header_person: "The person you want to invite:",

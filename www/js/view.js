@@ -22,9 +22,9 @@ $(document).on("pagebeforeshow", "#home", function (){
 	// ================================== NATIONALITY ============================================//
 	
 	$('<select>').attr({'name':'InvitationNationality','id':'InvitationNationality','data-native-menu':'false'}).appendTo('#nationalities');
-	$('<option>').html(locals[cLANGUAGE].nationality[0]).appendTo('#InvitationNationality');	
-	for (i=1; i < locals[cLANGUAGE].nationality.length; i++){
-	     $('<option>').attr({'value':i}).html(locals[cLANGUAGE].nationality[i]).appendTo('#InvitationNationality');
+	$('<option>').html(nations[cLANGUAGE].nationality[0]).appendTo('#InvitationNationality');	
+	for (i=1; i < nations[cLANGUAGE].nationality.length; i++){
+	     $('<option>').attr({'value':i}).html(nations[cLANGUAGE].nationality[i]).appendTo('#InvitationNationality');
 	}
 	$('#InvitationNationality').selectmenu();
 	
@@ -34,9 +34,9 @@ $(document).on("pagebeforeshow", "#home", function (){
 	// ================================== LANGUAGE ============================================//	
 	
 	$('<select>').attr({'name':'InvitationLanguage','id':'InvitationLanguage','data-native-menu':'false'}).appendTo('#languages');
-	$('<option>').html(locals[cLANGUAGE].language[0]).appendTo('#InvitationLanguage');
-	for (i=1; i < locals[cLANGUAGE].language.length; i++){
-	     $('<option>').attr({'value':i}).html(locals[cLANGUAGE].language[i]).appendTo('#InvitationLanguage');
+	$('<option>').html(nations[cLANGUAGE].language[0]).appendTo('#InvitationLanguage');
+	for (i=1; i < nations[cLANGUAGE].language.length; i++){
+	     $('<option>').attr({'value':i}).html(nations[cLANGUAGE].language[i]).appendTo('#InvitationLanguage');
 	}
 	$('#InvitationLanguage').selectmenu();	
 	
