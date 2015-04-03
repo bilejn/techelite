@@ -16,15 +16,32 @@ $(document).on("pagebeforeshow", "#home", function (){
 	$("#InvitationFirstname").attr("placeholder", locals[cLANGUAGE].InvitationFirstname);	
 	$("#InvitationLastname").attr("placeholder", locals[cLANGUAGE].InvitationLastname);
 	
-    $('[name=InvitationNationality]  option[value="0"]').html(locals[cLANGUAGE].nationality_title);
-	$('[name=InvitationNationality]  option[value="1"]').html(locals[cLANGUAGE].nationality_1);
-	$('[name=InvitationNationality]  option[value="2"]').html(locals[cLANGUAGE].nationality_2);
-	$('[name=InvitationNationality]  option[value="3"]').html(locals[cLANGUAGE].nationality_3);
-	$('[name=InvitationNationality]  option[value="4"]').html(locals[cLANGUAGE].nationality_4);
-	$('[name=InvitationNationality]  option[value="5"]').html(locals[cLANGUAGE].nationality_5);
-	$('[name=InvitationNationality]  option[value="6"]').html(locals[cLANGUAGE].nationality_6);
-	$('[name=InvitationNationality]  option[value="7"]').html(locals[cLANGUAGE].nationality_7);
 	
+	
+
+	// ================================== NATIONALITY ============================================//
+	
+	$('<select>').attr({'name':'InvitationNationality','id':'InvitationNationality','data-native-menu':'false'}).appendTo('#nationalities');
+	for (i=0; i < locals[cLANGUAGE].nationality.length; i++){
+	     $('<option>').attr({'value':i}).html(locals[cLANGUAGE].nationality[i]).appendTo('#InvitationNationality');
+	}
+	$('#InvitationNationality').selectmenu();
+	
+	
+	
+	
+	// ================================== LANGUAGE ============================================//	
+	
+	$('<select>').attr({'name':'InvitationLanguage','id':'InvitationLanguage','data-native-menu':'false'}).appendTo('#languages');
+	$('<option>').html(locals[cLANGUAGE].language[0]).appendTo('#InvitationLanguage');
+	for (i=1; i < locals[cLANGUAGE].language.length; i++){
+	     $('<option>').attr({'value':i}).html(locals[cLANGUAGE].language[i]).appendTo('#InvitationLanguage');
+	}
+	$('#InvitationLanguage').selectmenu();	
+	
+	
+	
+
 	$('[name=InvitationLanguage]  option[value="0"]').html(locals[cLANGUAGE].language_title);
 	$('[name=InvitationLanguage]  option[value="1"]').html(locals[cLANGUAGE].language_1);
 	$('[name=InvitationLanguage]  option[value="2"]').html(locals[cLANGUAGE].language_2);

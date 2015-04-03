@@ -23,7 +23,7 @@
 			
 
 		    },
-		    //On Failure set language to english
+		    //On Failure set language to English
 		    function () {
 				$.jStorage.set("lang", "en");
 			}
@@ -54,9 +54,6 @@
 	  filerefcss.setAttribute("href", "css/rtl.jquery.mobile-1.4.0.css");
 		document.getElementsByTagName("head")[0].appendChild(filerefcss);
 
-	
-		/* $("#home").page("refresh"); */
-
 	}
 	
 
@@ -69,19 +66,11 @@ var locals= {
         InvitationFirstname: "First name", 
         InvitationLastname: "Last name", 
 
-
-        nationality_title: 'Nationality',
-        nationality_1: 'Brazil',
-        nationality_2: 'Canada',
-        nationality_3: 'China',
-		nationality_4: 'Japan',
-		nationality_5: 'Spain',
-		nationality_6: 'UK',
-		nationality_7: 'USA',
 		
-		language_title: 'Language',
-		language_1: 'Arabic',
-		language_2: 'English',
+		nationality: ["Nationality","Brasil", "Canada", "China", "Japan", "Spain", "UK", "USA"],
+		
+		language: ['Language', 'Arabic', 'English'],
+
 		
 		InvitationPhoneNo: "Phone number",
 		InvitationEmail: "E-mail",
@@ -125,19 +114,11 @@ var locals= {
         header_person: "Osoba koju pozivate:",
         InvitationFirstname: "Ime", 
         InvitationLastname: "Prezime",
-
-        nationality_title: 'Nacionalnost',
-        nationality_1: 'Brazil',
-        nationality_2: 'Kanada',
-        nationality_3: 'Kina',
-		nationality_4: 'Japan',
-		nationality_5: 'Spanija',
-		nationality_6: 'Velika Britanija',
-		nationality_7: 'SAD',
 		
-		language_title: 'Jezik',
-		language_1: 'Arapski',
-		language_2: 'Engleski',
+		nationality: ['Nacionalnost','Brazil', 'Kanada', 'Kina', 'Japan', 'Spanija', 'Velika Britanija', 'SAD'],
+
+		language: ['Jezik', 'Arapski', 'Engleski'],
+
 		
 		InvitationPhoneNo: "Broj telefona",
 		InvitationEmail: "E-posta",
@@ -181,19 +162,10 @@ var locals= {
 		header_person:	"الشخص المراد دعوته للإسلام:",
 		InvitationFirstname: "الاسم الأول", 
 		InvitationLastname:	"الاسم الأخير", 
+	
+		nationality: ['الجنسية','البرازيل', 'كندا', 'الصين', 'اليابان', 'اسبانيا', 'المملكة المتحدة', 'الولايات المتحدة الأمريكية'],
 		
-		nationality_title: 'الجنسية',
-        nationality_1: 'البرازيل',
-        nationality_2: 'كندا',
-		nationality_3: 'الصين',
-		nationality_4: 'اليابان',
-		nationality_5: 'اسبانيا',
-		nationality_6: 'المملكة المتحدة',
-		nationality_7: 'الولايات المتحدة الأمريكية',
-		
-		language_title: 'اللغة',
-		language_1: 'العربية',
-		language_2: 'الأنكليزية',
+		language: ['اللغة', 'العربية', 'الأنكليزية'],
 		
 		InvitationPhoneNo: "رقم الأتصال",
 		InvitationEmail: "البريد الإلكتروني",
@@ -215,7 +187,7 @@ var locals= {
 		submit: "ارسال",
 		clear: 'تصفية الحقول',
 		sent: "تم الإرسال",
-		error: "Error sending invitation.",
+		error: "خطأ أثناء الإرسال",
 		
 	/* alerts*/
 		
