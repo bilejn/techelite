@@ -47,7 +47,7 @@ var form = (function() {
 		/* Check InvitationNationality */						
 				var value = $("#InvitationNationality").val();
 						data.InvitationNationality = parseInt(value);
-					if (value == "0"){
+					if (value == "Nationality"){
 						var p = $('p[for="InvitationNationality"]');
 						p.addClass("invalid");
 						ok = false;
@@ -56,7 +56,7 @@ var form = (function() {
 		/* Check InvitationLanguage */						
 				var value = $("#InvitationLanguage").val();
 					data.InvitationLanguage = parseInt(value);
-					if (value == "0"){
+					if (value == "Language"){
 						var p = $('p[for="InvitationLanguage"]');
 						p.addClass("invalid");
 						ok = false;
@@ -178,34 +178,6 @@ var form = (function() {
 								$("#back").removeClass('ui-disabled');
                     }
                 });
-		
-			/* $.ajax({
-				type: "POST",
-				url : "http://www.cuh.org.sa/invite/api/InvitationApi",
-				data: {"InvitationFirstname":"Invitation Firstname 1",
-						"InvitationLastname":"Invitation Lastname 1",
-						"InvitationNationality":1,
-						"InvitationLanguage":1,
-						"InvitationPhoneNo":"11111",
-						"InvitationEmail":"invitation1@email.com",
-						"InvitationAnotherContactInfo":"10000",
-						"InvitationGender":"M",
-						"InvitationStatus":1,
-						"InviterFirstname":"Inviter Firstname 1",
-						"InviterLastname":"Inviter Lastname 1",
-						"InviterPhoneNo":"11000",
-						"InviterEmail":"inviter1@email.com"},
-				contentType:"text/json",
-				success:function(data, textStatus, jqXHR) {
-					alert(data);
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					alert("Error loading list.");
-				},
-				complete: function (jqXHR, textStatus){
-					alert(textStatus);
-				}
-			}); */
 			
 		
 		},

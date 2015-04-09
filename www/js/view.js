@@ -20,7 +20,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 	
 
 	// ================================== NATIONALITY ============================================//
-	
+	$('#nationalities').html("");
 	$('<select>').attr({'name':'InvitationNationality','id':'InvitationNationality','data-native-menu':'false'}).appendTo('#nationalities');
 	$('<option>').html(nations[cLANGUAGE].nationality[0]).appendTo('#InvitationNationality');	
 	for (i=1; i < nations[cLANGUAGE].nationality.length; i++){
@@ -32,7 +32,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 	
 	
 	// ================================== LANGUAGE ============================================//	
-	
+	$('#languages').html("");
 	$('<select>').attr({'name':'InvitationLanguage','id':'InvitationLanguage','data-native-menu':'false'}).appendTo('#languages');
 	$('<option>').html(nations[cLANGUAGE].language[0]).appendTo('#InvitationLanguage');
 	for (i=1; i < nations[cLANGUAGE].language.length; i++){
@@ -91,8 +91,8 @@ $(document).on("pagebeforeshow", "#confirm", function (){
 		var names = {
 			InvitationFirstname : locals[cLANGUAGE].InvitationFirstname,
 			InvitationLastname: locals[cLANGUAGE].InvitationLastname,
-			InvitationNationality: locals[cLANGUAGE].nationality_title,
-			InvitationLanguage: locals[cLANGUAGE].language_title,
+			InvitationNationality: locals[cLANGUAGE].nationality[0],
+			InvitationLanguage: locals[cLANGUAGE].language[0],
 			InvitationPhoneNo: locals[cLANGUAGE].InvitationPhoneNo,
 			InvitationEmail: locals[cLANGUAGE].InvitationEmail,
 			InvitationAnotherContactInfo: locals[cLANGUAGE].InvitationAnotherContactInfo,
