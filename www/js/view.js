@@ -108,7 +108,7 @@ $(document).on("pagebeforeshow", "#confirm", function (){
 		var output = '<div class="confirm-grid ui-grid-a">';
 		for (var key in data) {
 			var key2 = key;
-			output = output + '<div class="ui-block-a">' +names[key2] + ':</div><div class="ui-block-b">' + data[key] + '</div>';
+			output = output + '<div class="ui-block-a">' +names[key2] + ':</div><div class="ui-block-b">' + ispis(key2) + '</div>';
 		}		
 		output = output + '</div>';
 		$("#reviewInvitation").html(output);
@@ -117,3 +117,20 @@ $(document).on("pagebeforeshow", "#confirm", function (){
 
 
 });	
+
+
+function ispis (key){
+	var cLANGUAGE = $.jStorage.get("lang");	
+	var data = $.jStorage.get("json_data");
+	if (key == "InvitationNationality")
+		return locals[cLANGUAGE].nationality[data[key]];
+	else if (key == "InvitationLanguage")
+		return locals[cLANGUAGE].language[data[key]];
+	else
+		
+		return data[key];
+}
+
+
+
+
