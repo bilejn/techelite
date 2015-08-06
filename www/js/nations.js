@@ -3,9 +3,9 @@ var nations = {
 // ==================================== English ==========================================//
 	'en': {
 
-		nationality: ["Nationality","Brasil", "Canada", "China", "Japan", "Spain", "UK", "USA"],
+		nationality: ["Nationality","USA", "China","Japan", "United Kingdom", "Spain", "Brazil", "Canada", "Malaysia", "HK", "India"],
 		
-		language: ['Language', 'Arabic', 'English']
+		language: ['Language', 'English', 'Tagalog', 'Spanish', 'Mandarin', 'Fookienese', 'Cantonese', 'Japanese', 'Portugese', 'Chinese', 'French', 'Indian', 'Nihonggo', 'Malay']
 	},
 
 	

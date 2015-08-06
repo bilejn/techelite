@@ -127,7 +127,6 @@ function ispis (key){
 	else if (key == "InvitationLanguage")
 		return locals[cLANGUAGE].language[data[key]];
 	else
-		
 		return data[key];
 }
 
