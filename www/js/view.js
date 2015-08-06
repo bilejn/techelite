@@ -21,7 +21,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 
 	// ================================== NATIONALITY ============================================//
 	$('#nationalities').html("");
-	$('<select>').attr({'name':'InvitationNationality','id':'InvitationNationality','data-native-menu':'false'}).appendTo('#nationalities');
+	$('<select>').attr({'name':'InvitationNationality','id':'InvitationNationality'}).appendTo('#nationalities');
 	$('<option>').html(nations[cLANGUAGE].nationality[0]).appendTo('#InvitationNationality');	
 	for (i=1; i < nations[cLANGUAGE].nationality.length; i++){
 	     $('<option>').attr({'value':i}).html(nations[cLANGUAGE].nationality[i]).appendTo('#InvitationNationality');
@@ -33,7 +33,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 	
 	// ================================== LANGUAGE ============================================//	
 	$('#languages').html("");
-	$('<select>').attr({'name':'InvitationLanguage','id':'InvitationLanguage','data-native-menu':'false'}).appendTo('#languages');
+	$('<select>').attr({'name':'InvitationLanguage','id':'InvitationLanguage'}).appendTo('#languages');
 	$('<option>').html(nations[cLANGUAGE].language[0]).appendTo('#InvitationLanguage');
 	for (i=1; i < nations[cLANGUAGE].language.length; i++){
 	     $('<option>').attr({'value':i}).html(nations[cLANGUAGE].language[i]).appendTo('#InvitationLanguage');
